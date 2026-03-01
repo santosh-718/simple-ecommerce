@@ -13,29 +13,24 @@ function App() {
 
   return (
     <div style={styles.container}>
+      <div style={styles.overlay}></div>
       <header style={styles.header}>
         <h1 style={styles.title}>Bhagya Jewelleries</h1>
-        <p style={styles.tagline}>Elegance Crafted in Gold & Diamonds</p>
+        <p style={styles.tagline}>Where Elegance Meets Tradition</p>
       </header>
 
       <div style={styles.card}>
         {page === "login" ? (
           <>
             <Login setUserId={setUserId} />
-            <p
-              onClick={() => setPage("register")}
-              style={styles.link}
-            >
+            <p onClick={() => setPage("register")} style={styles.link}>
               Don’t have an account? Register
             </p>
           </>
         ) : (
           <>
             <Register />
-            <p
-              onClick={() => setPage("login")}
-              style={styles.link}
-            >
+            <p onClick={() => setPage("login")} style={styles.link}>
               Already have an account? Login
             </p>
           </>
@@ -48,43 +43,58 @@ function App() {
 const styles = {
   container: {
     minHeight: "100vh",
-    background: "linear-gradient(135deg, #b9935a 0%, #5d3a00 100%)",
+    backgroundImage:
+      "url('https://images.unsplash.com/photo-1587837073080-448bc6a2329b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')", // jewellery background
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    position: "relative",
+    fontFamily: "'Playfair Display', serif",
+    color: "#fff",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    fontFamily: "'Playfair Display', serif",
-    color: "#fff",
+    justifyContent: "center",
     padding: "20px",
+  },
+  overlay: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: "rgba(0,0,0,0.5)",
+    zIndex: 0,
   },
   header: {
     textAlign: "center",
     marginBottom: "30px",
+    zIndex: 1,
   },
   title: {
-    fontSize: "36px",
+    fontSize: "42px",
     fontWeight: "bold",
-    color: "#ffd700", // gold accent
+    color: "#FFD700", // gold accent
     marginBottom: "10px",
   },
   tagline: {
-    fontSize: "16px",
+    fontSize: "18px",
     color: "#f5f5f5",
     fontStyle: "italic",
   },
   card: {
-    background: "#fff",
+    background: "rgba(255,255,255,0.9)",
     color: "#333",
     padding: "40px",
     borderRadius: "12px",
-    boxShadow: "0 8px 25px rgba(0,0,0,0.2)",
+    boxShadow: "0 8px 25px rgba(0,0,0,0.3)",
     width: "400px",
     textAlign: "center",
-    fontFamily: "Arial, sans-serif",
+    zIndex: 1,
   },
   link: {
     marginTop: "20px",
     fontSize: "14px",
-    color: "#b9935a",
+    color: "#800000",
     cursor: "pointer",
     fontWeight: "bold",
     textDecoration: "underline",
