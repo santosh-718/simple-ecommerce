@@ -54,6 +54,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     color: "#fff",
+    padding: "40px",
   },
   overlay: {
     position: "absolute",
@@ -66,34 +67,35 @@ const styles = {
   },
   header: {
     textAlign: "center",
-    marginBottom: "30px",
+    marginBottom: "40px",
     zIndex: 1,
   },
   title: {
-    fontSize: "48px",
+    fontSize: "56px",
     fontWeight: "bold",
     color: "#FFD700", // gold accent
-    marginBottom: "10px",
-    textShadow: "2px 2px 6px rgba(0,0,0,0.7)",
+    marginBottom: "15px",
+    textShadow: "2px 2px 8px rgba(0,0,0,0.7)",
   },
   tagline: {
-    fontSize: "18px",
+    fontSize: "20px",
     color: "#f5f5f5",
     fontStyle: "italic",
   },
   card: {
     background: "rgba(255,255,255,0.95)",
     color: "#333",
-    padding: "40px",
-    borderRadius: "15px",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.4)",
-    width: "400px",
+    padding: "60px",
+    borderRadius: "20px",
+    boxShadow: "0 12px 40px rgba(0,0,0,0.5)",
+    width: "600px", // wider for laptop screens
+    maxWidth: "90%", // responsive fallback
     textAlign: "center",
     zIndex: 1,
   },
   link: {
-    marginTop: "20px",
-    fontSize: "14px",
+    marginTop: "25px",
+    fontSize: "16px",
     color: "#800000",
     cursor: "pointer",
     fontWeight: "bold",
@@ -101,17 +103,17 @@ const styles = {
   },
   button: {
     width: "100%",
-    padding: "12px",
+    padding: "14px",
     background: "linear-gradient(90deg, #FFD700, #DAA520)",
     color: "#fff",
     border: "none",
-    borderRadius: "8px",
-    fontSize: "16px",
+    borderRadius: "10px",
+    fontSize: "18px",
     cursor: "pointer",
     transition: "box-shadow 0.3s ease",
   },
   buttonHover: {
-    boxShadow: "0 0 15px rgba(255,215,0,0.8)",
+    boxShadow: "0 0 20px rgba(255,215,0,0.9)",
   },
 };
 
