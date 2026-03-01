@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div style={{ textAlign: "center" }}>
-      <h1>Simple E-Commerce</h1>
+      <h1>Bhagya Jewelleries</h1>
       {page === "login" ? (
         <>
           <Login setUserId={setUserId} />
