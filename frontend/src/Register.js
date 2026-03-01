@@ -4,7 +4,7 @@ function Register() {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
 
   const register = async () => {
-    await fetch("http://api/register", {
+    await fetch("http:/api/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
