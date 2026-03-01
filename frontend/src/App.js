@@ -44,7 +44,7 @@ const styles = {
   container: {
     minHeight: "100vh",
     backgroundImage:
-      "url('https://images.unsplash.com/photo-1600180758895-3e4e3f3f3f3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')", // jewellery showroom background
+      "url('https://images.unsplash.com/photo-1602526216030-3c6f3f3f3f3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')", // ornaments background
     backgroundSize: "cover",
     backgroundPosition: "center",
     position: "relative",
@@ -54,7 +54,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     color: "#fff",
-    padding: "40px",
+    padding: "20px",
   },
   overlay: {
     position: "absolute",
@@ -62,7 +62,7 @@ const styles = {
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: "rgba(0,0,0,0.6)",
+    background: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8))",
     zIndex: 0,
   },
   header: {
@@ -71,25 +71,25 @@ const styles = {
     zIndex: 1,
   },
   title: {
-    fontSize: "56px",
+    fontSize: "64px",
     fontWeight: "bold",
     color: "#FFD700", // gold accent
     marginBottom: "15px",
-    textShadow: "2px 2px 8px rgba(0,0,0,0.7)",
+    textShadow: "2px 2px 10px rgba(0,0,0,0.8)",
   },
   tagline: {
-    fontSize: "20px",
+    fontSize: "22px",
     color: "#f5f5f5",
     fontStyle: "italic",
   },
   card: {
-    background: "rgba(255,255,255,0.95)",
+    background: "rgba(255,255,255,0.92)",
     color: "#333",
-    padding: "60px",
+    padding: "50px",
     borderRadius: "20px",
-    boxShadow: "0 12px 40px rgba(0,0,0,0.5)",
-    width: "600px", // wider for laptop screens
-    maxWidth: "90%", // responsive fallback
+    boxShadow: "0 15px 40px rgba(0,0,0,0.6)",
+    width: "700px", // larger card for laptops
+    maxWidth: "95%", // responsive fallback
     textAlign: "center",
     zIndex: 1,
   },
@@ -100,20 +100,6 @@ const styles = {
     cursor: "pointer",
     fontWeight: "bold",
     textDecoration: "underline",
-  },
-  button: {
-    width: "100%",
-    padding: "14px",
-    background: "linear-gradient(90deg, #FFD700, #DAA520)",
-    color: "#fff",
-    border: "none",
-    borderRadius: "10px",
-    fontSize: "18px",
-    cursor: "pointer",
-    transition: "box-shadow 0.3s ease",
-  },
-  buttonHover: {
-    boxShadow: "0 0 20px rgba(255,215,0,0.9)",
   },
 };
 
