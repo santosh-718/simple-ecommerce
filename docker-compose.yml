@@ -1,19 +1,23 @@
+version: "3.9"
+
 services:
+
   postgres:
     image: postgres:15
-    container_name: postgres
+    container_name: ecommerce-postgres
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
       POSTGRES_DB: ecommerce
-    ports:
-      - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - ecommerce-net
 
   backend:
     build: ./backend
-    container_name: backend
+    container_name: ecommerce-backend
     ports:
       - "5000:5000"
     environment:
@@ -23,18 +27,24 @@ services:
       DB_NAME: ecommerce
     depends_on:
       - postgres
+    restart: unless-stopped
+    networks:
+      - ecommerce-net
 
   frontend:
     build: ./frontend
-    container_name: frontend
+    container_name: ecommerce-frontend
     ports:
       - "3000:80"
     depends_on:
       - backend
+    restart: unless-stopped
+    networks:
+      - ecommerce-net
 
   pgadmin:
     image: dpage/pgadmin4
-    container_name: pgadmin
+    container_name: ecommerce-pgadmin
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
       PGADMIN_DEFAULT_PASSWORD: admin123
@@ -42,6 +52,12 @@ services:
       - "5050:80"
     depends_on:
       - postgres
+    restart: unless-stopped
+    networks:
+      - ecommerce-net
 
 volumes:
   pgdata:
+
+networks:
+  ecommerce-net:
